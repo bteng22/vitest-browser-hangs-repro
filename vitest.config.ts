@@ -1,4 +1,4 @@
-// import react from "@vitejs/plugin-react-swc"; Neither of these work
+// import react from "@vitejs/plugin-react-swc"; // Neither of these work
 import react from "@vitejs/plugin-react"; // Neither of these work
 import { defineConfig } from "vitest/config";
 
