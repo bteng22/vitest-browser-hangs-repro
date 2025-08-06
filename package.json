@@ -6,22 +6,34 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "NODE_NO_WARNINGS=1 vitest --run --reporter=default --reporter=junit --outputFile=test-results/test-results.xml",
+    "test:dev": "NODE_NO_WARNINGS=1 vitest --project=unit",
+    "test:browser": "NODE_NO_WARNINGS=1 vitest --project=browser --browser=chromium --browser.headless=true"
   },
   "dependencies": {
+    "next": "15.4.5",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.4.5"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "@vitest/browser": "3.2.4",
+    "@vitest/ui": "3.2.4",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
-    "@eslint/eslintrc": "^3"
+    "playwright": "1.54.2",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "7.0.6",
+    "vitest": "3.2.4",
+    "vitest-browser-react": "1.0.1"
   }
 }
