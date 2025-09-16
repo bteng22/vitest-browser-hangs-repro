@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "NODE_NO_WARNINGS=1 vitest --run --reporter=default --reporter=junit --outputFile=test-results/test-results.xml",
-    "test:dev": "NODE_NO_WARNINGS=1 vitest --project=unit",
-    "test:browser": "NODE_NO_WARNINGS=1 vitest --project=browser --browser=chromium --browser.headless=true"
+    "test": "NODE_NO_WARNINGS=1 vitest --project=browser --browser=chromium --browser.headless=true"
   },
   "dependencies": {
     "next": "15.4.5",

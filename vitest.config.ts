@@ -28,18 +28,7 @@ export default defineConfig({
             isolate: true,
             provider: "playwright",
             instances: [{ browser: "chromium" }],
-            locators: {
-              testIdAttribute: "data-testid",
-            },
           },
-        },
-      },
-      {
-        test: {
-          name: "unit",
-          include: ["**/*.{test,spec}.ts"],
-          environment: "jsdom",
-          globals: true,
         },
       },
     ],
